@@ -1,0 +1,42 @@
+### Starting build.
+# Target: pfxVM.ml.depends, tags: { debug, explain, extension:ml, file:pfxVM.ml, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules pfxVM.ml > pfxVM.ml.depends # cached
+# Target: utils/location.mli.depends, tags: { debug, explain, extension:mli, file:utils/location.mli, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules utils/location.mli > utils/location.mli.depends # cached
+# Target: utils/location.cmi, tags: { byte, compile, debug, explain, extension:mli, file:utils/location.mli, interf, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I utils -I pfx -I expr -o utils/location.cmi utils/location.mli # cached
+# Target: pfx/pfxEval.ml.depends, tags: { debug, explain, extension:ml, file:pfx/pfxEval.ml, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules pfx/pfxEval.ml > pfx/pfxEval.ml.depends # cached
+# Target: pfx/pfxAst.ml.depends, tags: { debug, explain, extension:ml, file:pfx/pfxAst.ml, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules pfx/pfxAst.ml > pfx/pfxAst.ml.depends # cached
+# Target: pfx/pfxAst.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:pfx/pfxAst.cmo, file:pfx/pfxAst.ml, implem, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I pfx -I expr -I utils -o pfx/pfxAst.cmo pfx/pfxAst.ml # cached
+# Target: pfx/pfxEval.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:pfx/pfxEval.cmo, file:pfx/pfxEval.ml, implem, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I pfx -I expr -I utils -o pfx/pfxEval.cmo pfx/pfxEval.ml # cached
+# Target: pfx/pfxLexer.mll, tags: { debug, explain, extension:mll, file:pfx/pfxLexer.mll, lexer, ocaml, ocamllex, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamllex.opt -q pfx/pfxLexer.mll # cached
+# Target: pfx/pfxLexer.ml.depends, tags: { debug, explain, extension:ml, file:pfx/pfxLexer.ml, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules pfx/pfxLexer.ml > pfx/pfxLexer.ml.depends # cached
+# Target: pfx/pfxParser.mly.depends, tags: { debug, explain, extension:mly, file:pfx/pfxParser.mly, infer, menhir_ocamldep, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+menhir --raw-depend --ocamldep '/usr/bin/ocamldep.opt -modules' pfx/pfxParser.mly > pfx/pfxParser.mly.depends # cached
+# Target: pfx/pfxParser.mly, tags: { byte, compile, debug, explain, extension:ml, extension:mly, file:pfx/pfxParser.ml, file:pfx/pfxParser.mly, infer, menhir, ocaml, parser, quiet, traverse, use_menhir, warn_a }
+menhir --ocamlc '/usr/bin/ocamlc.opt -g -w a -I pfx -I expr -I utils' --explain --infer pfx/pfxParser.mly # cached
+# Target: pfx/pfxParser.mli.depends, tags: { debug, explain, extension:mli, file:pfx/pfxParser.mli, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules pfx/pfxParser.mli > pfx/pfxParser.mli.depends # cached
+# Target: pfx/pfxParser.cmi, tags: { byte, compile, debug, explain, extension:mli, file:pfx/pfxParser.mli, interf, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I pfx -I expr -I utils -o pfx/pfxParser.cmi pfx/pfxParser.mli # cached
+# Target: pfx/pfxLexer.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:pfx/pfxLexer.cmo, file:pfx/pfxLexer.ml, implem, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I pfx -I expr -I utils -o pfx/pfxLexer.cmo pfx/pfxLexer.ml # cached
+# Target: pfxVM.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:pfxVM.cmo, file:pfxVM.ml, implem, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I pfx -I expr -I utils -o pfxVM.cmo pfxVM.ml # cached
+# Target: utils/location.ml.depends, tags: { debug, explain, extension:ml, file:utils/location.ml, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules utils/location.ml > utils/location.ml.depends # cached
+# Target: utils/location.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:utils/location.cmo, file:utils/location.ml, implem, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I utils -I pfx -I expr -o utils/location.cmo utils/location.ml # cached
+# Target: pfx/pfxParser.ml.depends, tags: { debug, explain, extension:ml, file:pfx/pfxParser.ml, ocaml, ocamldep, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamldep.opt -modules pfx/pfxParser.ml > pfx/pfxParser.ml.depends # cached
+# Target: pfx/pfxParser.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:pfx/pfxParser.cmo, file:pfx/pfxParser.ml, implem, ocaml, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -c -g -w a -I pfx -I expr -I utils -o pfx/pfxParser.cmo pfx/pfxParser.ml # cached
+# Target: pfxVM.byte, tags: { byte, debug, dont_link_with, explain, extension:byte, file:pfxVM.byte, link, ocaml, program, quiet, traverse, use_menhir, warn_a }
+/usr/bin/ocamlc.opt -g -I pfx -I utils pfx/pfxAst.cmo pfx/pfxEval.cmo pfx/pfxParser.cmo utils/location.cmo pfx/pfxLexer.cmo pfxVM.cmo -o pfxVM.byte # cached
+# Compilation successful.

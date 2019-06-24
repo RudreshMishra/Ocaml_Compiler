@@ -1,0 +1,157 @@
+AUTHORS
+-------
+
+- MISHRA Rudresh
+- KLUTSE Raymond
+…
+
+===============
+
+Description of the project
+--------------------------
+
+this project aimed to practice the lexer and parser in ocaml
+
+===============
+
+Sources
+-------
+
+Git repository: https://redmine-df.telecom-bretagne.eu/git/PROJECTNAME
+
+(obviously, you _will_ use a version control system such as Git, IMT
+Atlantique provides a project management platform: use it!)
+
+Release : tag 1.0 or commit acdeacdacdacdacd
+
+===============
+
+How to…
+-------
+
+…retrieve the sources?
+
+  git clone https://redmine-df.telecom-bretagne.eu/git/PROJECTNAME
+
+…compile?
+
+  	ocamlc -c (name_of_file).ml
+
+before compiling
+	For lexer:
+
+	ocamllex (name_of_lexer).mll
+
+	For parser:
+
+	menhir (name-_of_parser).mly
+
+
+…execute and test?
+
+  ocamlbuild main.byte -- TESTFILE.pfx
+
+
+===============
+
+Structure of the project
+------------------------
+
+The project is organized as following:
+
+Explain here the organization of your project, what is the use of each file or
+group of files, etc.
+
+You may also show the file tree as the following example:
+
+project
+├── Doc		                          <- Document with the decription
+├── README
+├── Src
+    ├──	├── _build
+	├── expr: the expr compiler
+	│   ├── binOp.ml
+	│   ├── binOp.mli
+	│   ├── exprAst.ml
+	│   ├── exprAst.mli
+	│   ├── exprEval.ml
+	│   ├── exprEval.mli
+	│   ├── exprLexer.mll
+	│   ├── exprParser.mli
+	│   ├── exprParser.mly
+	│   ├── exprToPfx.ml               <- finished as part of question 5.2
+	│   └── exprToPfx.mli
+	├── expr_fun: the expr parser for section 7
+	│   ├── exprAst.ml
+	│   ├── exprAst.mli
+	│   ├── exprLexer.mll
+	│   └── exprParser.mly
+	├── exprMain.ml: main file for the expr compiler
+	├── pfx: the pfx VM
+	│   ├── pfxAst.ml                  <- finished as part of question 4.1
+	│   ├── pfxEval.ml                 <- finished as part of question 4.2
+	│   ├── pfxLexer.mll               <- finished as part of question 6.1 also to show the error location in question 7
+	│   └── pfxParser.mly              <- finished as part of question 8.1
+	├── pfx_fun: the pfx VM
+	│   ├── pfxAst.ml                  
+	│   ├── pfxEval.ml                 
+	│   ├── pfxLexer.mll               <- finished as part of question 9.3
+	│   └── pfxParser.mly              <- finished as part of question 9.3
+	├── pfxVM.ml: main file for the pfx VM
+	├── README
+	├── _tags: configuration file for ocamlbuild
+	├── test_4_2.ml			   <- finished it to test the 4.2
+	├── test_5_2.ml			   <- finished it to test the 5.2
+	├── test_6_2.ml			   <- finished to print the lexer token encounter in question 6.2
+	├── test_8_2.ml			   <- finished to print the ast encounter in question 8.2
+	├── tests: tests starting by err raise errors !!! You should add more tests !!!
+	│   ├── err_prog0.pfx
+	│   ├── err_prog1.pfx
+	│   ├── ok_first.pfx
+	│   ├── ok_1arg.pfx
+	│   ├── ok_2args.pfx
+	│   ├── ok_example_from_lecture0.pfx
+	│   ├── ok_example_from_lecture1.pfx
+	│   ├── ok_prog.pfx
+	│   └── ok_second.pfx
+	└── utils
+	    ├── location.ml: module offering a data type for a location in a file
+	    └── location.mli
+
+
+===============
+
+Progress
+--------
+
+- We stopped at question 10.1  (proof of derivation)
+- we tried to attempt the question 10.3 and 11.2
+- There is still a bug in question 9.3, though we tried to implement it with full effort but due to confusion we couldnt progress
+- we could finish the basic lexer with all the necessary prints
+
+===============
+
+Know bugs and issues
+--------------------
+
+- We were not able to manage question 10.3 completely due to lack of example statement
+
+===============
+
+Helpful resources
+-----------------
+
+- we used youtube channel for the parser and lexer https://www.youtube.com/channel/UCSZ5lYLg6ARj4Wow3ZQXQzA
+- book "Real World OCaml" by O'Reilly :-link: https://realworldocaml.org/ helped with the syntax
+- …
+
+===============
+
+Difficulties
+------------
+
+- thinking functional.
+- language is difficult to grasp compared to others.
+- lack of pratical material on the same topic.
+- lack of instant support if difficulties found.
+
